@@ -1,0 +1,70 @@
+{
+	"parameters_RandomForestClassifier": {"n_estimators": [4, 6, 9, 10, 15,25,30], 
+					"max_features": ["log2", "sqrt"], 
+					"criterion": ["entropy", "gini","log_loss"],
+					"max_depth": [2, 3, 5, 10,20,30], 
+					"min_samples_split": [2, 3, 5,6,7,8],
+					"min_samples_leaf": [1, 5, 8,12,20]
+					 },
+	"parameters_LogisticRegression_l2": {"solver": ["newton-cg", "lbfgs", "liblinear"], 
+					"penalty": ["l2"], 
+					"C": [200,100,10, 1.0, 0.1, 0.01],
+					"max_iter":[10,100]},
+	"parameters_LogisticRegression_elasticnet": {"solver": ["saga"],
+					"penalty" :["elasticnet"],
+					"C": [200,100,10, 1.0, 0.1, 0.01],
+					"l1_ratio" : [0.1,0.2,0.4,0.6,0.8,0.9],
+					"max_iter":[10,100]
+					},
+	"parameters_LogisticRegression_l1": {"solver": ["liblinear","saga"],
+					"penalty" :["l1"],
+					"C": [200,100,10, 1.0, 0.1, 0.01],
+					"max_iter":[10,100]
+					},
+	"parameters_SupportVectorMachine_linear": {"C": [0.01, 0.1, 1, 5,10, 50, 100, 1000], "kernel": ["linear"]},
+	"parameters_SupportVectorMachine_rbf": {"C": [0.01, 0.1, 1, 5,10, 50, 100, 1000], "gamma": [0.001, 0.0001], "kernel": ["rbf"]},
+	"parameters_SupportVectorMachine_sigmoid": {"C": [0.01, 0.1, 1, 5,10, 50, 100, 1000], "gamma": [0.001, 0.0001], "kernel": ["sigmoid"]},
+	"parameters_SupportVectorMachine_mixed": {"C": [0.01, 0.1, 1, 5,10, 50, 100, 1000], "gamma":["scale"], "kernel":["poly", "rbf", "sigmoid", "linear"]},
+	"parameters_GaussianNB": {"var_smoothing": [1.0, 0.3359818286283782, 0.11288378916846892, 0.0379269019073225, 0.012742749857031341,0.004281332398719396,0.0014384498882876629,0.0004832930238571757,0.00016237767391887227,5.455594781168526e-05,1.8329807108324375e-05,6.158482110660267e-06,2.06913808111479e-06,6.951927961775605e-07,2.3357214690901262e-07,7.847599703514623e-08,2.6366508987303608e-08,8.858667904100832e-09, 2.9763514416313252e-09,1e-09]},
+	"parameters_KNeighborsClassifier": {"n_neighbors": [2, 3, 4, 5, 10], 
+					  "weights": ["uniform", "distance"],
+					  "algorithm" : ["auto", "ball_tree", "kd_tree", "brute"],
+					  "leaf_size" : [10, 20, 30, 50],
+					  "metric" : ["euclidean", "manhattan", "minkowski"]
+					 },
+	"parameters_DecisionTreeClassifier": {"max_features": ["log2", "sqrt"], 
+					  "criterion": ["entropy", "gini"],
+					  "max_depth": [2, 3, 5, 10, 50,100,200], 
+					  "min_samples_split": [2, 3, 50, 100,200],
+					  "min_samples_leaf": [1, 5, 8, 10,15,20]
+					 },
+	"parameters_Perceptron_l1": {
+					"tol": [1e-1, 1e-3, 1e-5],
+					"penalty": ["l1"],
+					"alpha": [0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3],
+					"eta0": [0.0001, 0.001, 0.01, 0.1, 1.0, 10, 100]
+					 },
+	"parameters_Perceptron_l2": {
+					"tol": [1e-1, 1e-3, 1e-5],
+					"penalty": ["l2"],
+					"alpha": [0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3],
+					"eta0": [0.0001, 0.001, 0.01, 0.1, 1.0, 10, 100]
+					 },
+	"parameters_Perceptron_elasticnet": {
+					"tol": [1e-1, 1e-3, 1e-5],
+					"alpha": [0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3],
+					"penalty": ["elasticnet"],
+					"eta0": [0.0001, 0.001, 0.01, 0.1, 1.0,10 , 100]
+					 },
+	"parameters_GradientBoost": {
+							"loss":["log_loss", "exponential"],
+							"learning_rate": [0.01, 0.025, 0.05, 0.075, 0.1, 0.15, 0.2],
+							"min_samples_split": [0.1, 0.2, 0.30000000000000004, 0.4, 0.5],
+							"min_samples_leaf": [0.1, 0.2, 0.30000000000000004, 0.4, 0.5],
+							"max_depth":[3,5,8],
+							"max_features":["log2","sqrt"],
+							"criterion": ["friedman_mse",  "squared_error"],
+							"subsample":[0.2, 0.5,1.0],
+							"n_estimators":[5,10,20,50,100]}
+
+}

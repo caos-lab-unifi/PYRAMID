@@ -1,0 +1,21 @@
+# Python bytecode
+__pycache__/
+PYRAMID/__pycache/
+*.pyc
+*.pyo
+*.pyd
+
+# Build and distribution
+build/
+dist/
+*.egg-info/
+
+# Environments
+.venv/
+venv/
+env/
+
+#DS_Store
+.DS_Store
+PYRAMID/._.DS_Store
+docs/build/

@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PYRAMID"
+version = "1.0.0"
+description = "PYthon Radiomics And Machine learnIng Data analysis"
+authors = [
+    {name = "Simone Romagnoli", email = "simone.romagnoli@unifi.it"}
+]
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0,<3",
+    "numpy",
+    "scikit-learn==1.6.1",
+    "scikit-survival",
+    "scipy",
+    "plotly",
+    "joblib",
+    "imbalanced-learn",
+    "matplotlib",
+    "seaborn",
+    "lifelines"
+]
+
+[project.urls]
+Homepage = "https://github.com/littleisland8/PYRAMID"
+
+[project.scripts]
+PYRAMID = "PYRAMID.PYRAMID:main"
+
+[tool.setuptools]
+packages = ["PYRAMID"]
+include-package-data = true
